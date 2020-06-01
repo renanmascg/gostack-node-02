@@ -26,7 +26,7 @@ class TransactionsRepository {
   public getBalance(): Balance {
     const income = this.acumulateValue('income');
     const outcome = this.acumulateValue('outcome');
-    const total = income + outcome;
+    const total = income - outcome;
 
     return {
       income,
